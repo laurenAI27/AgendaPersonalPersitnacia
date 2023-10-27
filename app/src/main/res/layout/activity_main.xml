@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#55D3E3"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvbbddcontactos"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="BBDD de Contactos"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btinsertar"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:text="Insertar Contacto" />
+
+    <Button
+        android:id="@+id/btborrar"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:text="Borrar Contacto" />
+
+    <Button
+        android:id="@+id/btbuscar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:text="Buscar Contacto" />
+
+    <Button
+        android:id="@+id/btlistado"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:text="Listado Contactos" />
+
+    <Spinner
+        android:id="@+id/spinnercolor"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+</LinearLayout>
