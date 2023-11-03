@@ -2,6 +2,7 @@ package com.example.agendapersonalpersitnacia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     // Apply the adapter to the spinner.
         jspinner.setAdapter(adapter);
+
+        Intent intento = new Intent(MainActivity.this, Insertar_Contacto.class);
 
 
     }
