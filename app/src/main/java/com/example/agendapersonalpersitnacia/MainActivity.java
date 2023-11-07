@@ -44,14 +44,16 @@ public class MainActivity extends AppCompatActivity {
                 if(position== 0){
                     linear.setBackgroundColor(Color.WHITE);
                 } else if (position== 1) {
-                    linear.setBackgroundColor(Color.parseColor(" #33f0ff"));//Azul claro
+                    linear.setBackgroundColor(Color.WHITE);
                 } else if (position== 2) {
-                    linear.setBackgroundColor(Color.parseColor(" #33f0ff"));//Amarillo
+                    linear.setBackgroundColor(Color.parseColor(" #33f0ff"));//Azul claro
                 }
                 else if(position == 3){
-                    linear.setBackgroundColor(Color.parseColor(" #33f0ff"));//Verde claro
+                    linear.setBackgroundColor(Color.parseColor(" #ffec33"));//Amarillo
                 } else if (position == 4) {
-                    linear.setBackgroundColor(Color.parseColor(" #33f0ff"));//Violeta
+                    linear.setBackgroundColor(Color.parseColor(" # #93ff33"));//Verde claro
+                } else if (position == 5) {
+                    linear.setBackgroundColor(Color.parseColor(" #bc80e3"));//Violeta
                 }
             }
 
