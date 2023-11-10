@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,15 +17,25 @@ import android.widget.Spinner;
 public class MainActivity extends AppCompatActivity {
 
     private SharedPreferences lastColour;
+
+    //Este editor sirve para escribir en el fichero del SharePreferences
     private SharedPreferences.Editor controlador;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //MySharePreferences es el nombre del fichero
+        //Mode_Private es el acceso que tiene uno al fichero
         lastColour = getSharedPreferences("MySharedPreferences", MODE_PRIVATE);
         controlador = lastColour.edit();
+
+        //Se le pasa el fichero, que se le ha asignado un número, y "Seleccionado" es el nombre clave del fichero
         final  int escogido = lastColour.getInt("Selecionado", 0);
+
+        //Para ver donde inicia para ver si se ha guardado con el Log
+        Log.d("MainActivity", "Recuperando posición: " + escogido); //para ver si se ha guardado la variable
+
         Button jBotonInsertar = findViewById(R.id.btinsertar);
         Button jBotonListado = findViewById(R.id.btlistado);
         Spinner jspinner = (Spinner) findViewById(R.id.spinnercolor);
@@ -40,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
         jspinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                //Esto guarda los cambios en el fichero
                 controlador.putInt("Selecionado", position).commit();
+                //Siempre que se arraca la aplicación arranca en la primera posición que es el 0 con el color inicial, en este caso
                 if(position== 0){
                     linear.setBackgroundColor(Color.WHITE);
                 } else if (position== 1) {
